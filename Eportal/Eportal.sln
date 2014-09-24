@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eportal", "Eportal\Eportal.csproj", "{143F8980-C7FC-4019-8D78-E49D407574E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eportal.Tests", "Eportal.Tests\Eportal.Tests.csproj", "{A2FE2501-1BDF-4213-BF86-67B210F5F633}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{143F8980-C7FC-4019-8D78-E49D407574E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{143F8980-C7FC-4019-8D78-E49D407574E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{143F8980-C7FC-4019-8D78-E49D407574E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{143F8980-C7FC-4019-8D78-E49D407574E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2FE2501-1BDF-4213-BF86-67B210F5F633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2FE2501-1BDF-4213-BF86-67B210F5F633}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2FE2501-1BDF-4213-BF86-67B210F5F633}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2FE2501-1BDF-4213-BF86-67B210F5F633}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
