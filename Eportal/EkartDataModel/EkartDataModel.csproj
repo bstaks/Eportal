@@ -118,10 +118,9 @@
       <DependentUpon>MusicStore.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\MenuInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModel\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EntityDeploy Include="DataModel\MusicStore.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
