@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eportal", "Eportal\Eportal.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eportal.Tests", "Eportal.Tests\Eportal.Tests.csproj", "{A2FE2501-1BDF-4213-BF86-67B210F5F633}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EkartBusiness", "EkartBusiness\EkartBusiness.csproj", "{14FD607C-E5D9-4B5B-8081-2F0B970C166E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EkartDataModel", "EkartDataModel\EkartDataModel.csproj", "{97B05ECB-1F26-4B5A-BC2D-DD00715C5D37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{A2FE2501-1BDF-4213-BF86-67B210F5F633}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2FE2501-1BDF-4213-BF86-67B210F5F633}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2FE2501-1BDF-4213-BF86-67B210F5F633}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14FD607C-E5D9-4B5B-8081-2F0B970C166E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14FD607C-E5D9-4B5B-8081-2F0B970C166E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14FD607C-E5D9-4B5B-8081-2F0B970C166E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14FD607C-E5D9-4B5B-8081-2F0B970C166E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97B05ECB-1F26-4B5A-BC2D-DD00715C5D37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97B05ECB-1F26-4B5A-BC2D-DD00715C5D37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97B05ECB-1F26-4B5A-BC2D-DD00715C5D37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97B05ECB-1F26-4B5A-BC2D-DD00715C5D37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
