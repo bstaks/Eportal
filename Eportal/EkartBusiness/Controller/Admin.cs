@@ -12,20 +12,22 @@ namespace EkartBusiness.Controller
         {
             try
             {
-                using (MusicStoreEntities dbContext = new MusicStoreEntities())
-                {
-                    List<Menu> menu = dbContext.Menus.Where(m => m.MenuType == (int)EnumType.AdminMenuType.ParentMenu && m.ParentMenuId == 0).Select(m => m).ToList();
-                    List<Menu> GetMenu = new List<Menu>();
-                    foreach (Menu m in menu) {
-                        GetMenu.Add(m);
-                        GetMenu.AddRange(GetChildMenu(m.ParentMenuId.Value));
+               
+                    using (MusicStoreEntities dbContext = new MusicStoreEntities())
+                    {
+                        IEnumerable<Menu> menu = dbContext.Menus.Where(m => m.MenuType == (int)EnumType.AdminMenuType.ParentMenu && m.ParentMenuId == 0).Select(m => m).ToList();
+                        //List<Menu> GetMenu = new List<Menu>();
+                        //foreach (Menu m in menu) {
+                        //    GetMenu.Add(m);
+                        //    GetMenu.AddRange(GetChildMenu(m.ParentMenuId.Value));
+                        //}
+                        return menu;
                     }
-                    return GetMenu;
                 }
-            }
+            
             catch (Exception ex)
             {
-                
+
                 throw ex;
             }
 

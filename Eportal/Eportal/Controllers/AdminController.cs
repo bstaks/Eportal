@@ -20,8 +20,16 @@ namespace Eportal.Controllers
         [ChildActionOnly]
         public ActionResult LeftMenu()
         {
-            List<Menu> menu = Admin.GetMenu().ToList();
-            return PartialView("LeftMenu", menu);
+            try
+            {
+                IEnumerable<Menu> menu = Admin.GetMenu();
+                return PartialView("LeftMenu", menu);
+            }
+            catch (Exception ex)
+            {
+                
+                throw ex;
+            }
         }
 
     }
