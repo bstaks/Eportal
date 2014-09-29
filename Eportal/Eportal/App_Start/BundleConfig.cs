@@ -24,6 +24,7 @@ namespace Eportal
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
+            
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
@@ -38,6 +39,15 @@ namespace Eportal
                         "~/Content/themes/base/jquery.ui.datepicker.css",
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
+
+            bundles.Add(new ScriptBundle("~/assets/js").Include(
+                            "~/assets/js/bootstrap.js"
+                            ));
+            
+            bundles.Add(new StyleBundle("~/assets/font-awesome/css").Include("~/assets/font-awesome/css/font-awesome.css"));
+            bundles.Add(new StyleBundle("~/assets/css").Include("~/assets/css/bootstrap.min.css", "~/assets/css/Site1.css"));
+            bundles.Add(new StyleBundle("~/assets/css").Include("~/assets/css/bootstrap-*", "~/assets/css/bootstrap.css"));
+            
         }
     }
 }
