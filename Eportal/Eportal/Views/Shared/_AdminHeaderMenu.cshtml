@@ -1,39 +1,76 @@
-﻿@model IEnumerable<EkartDataModel.DataModel.Menu>
-    <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li class="dropdown">
-                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                    Dropdown
-                    <span class="caret"></span>
-                </a>
-                <ul role="menu" class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
-                </ul>
-            </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="./">Default</a></li>
-            <li><a href="../navbar-static-top/">Static top</a></li>
-            <li class="dropdown">
-                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                    <span class="icon-user"></span>Dropdown
-                    <span class="caret"></span>
-                </a>
-                <ul role="menu" class="dropdown-menu">
-                    <li><a href="#"><span class="icon-user"></span>Profile</a></li>
-                    <li><a href="#"><span class="icon-envelope"></span>Inbox</a></li>
-                    <li><a href="#"><span class="icon-wrench"></span>Setting</a></li>
-                    <li><a href="#"><span class="icon-signout"></span>Setting</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
+﻿@model IEnumerable<EkartDataModel.ViewModel.MenuInfo>
+
+@helper GetChildMenU(List<EkartDataModel.ViewModel.MenuInfo> m)
+{
+    @Html.Raw("<ul role=\"menu\" class=\"dropdown-menu\">")
+    foreach (var item in m)
+    {
+            <li><a href="#">@item._menu.Name</a></li>
+        if (item._childMenu.Count > 0)
+        {
+            @GetChildMenU(item._childMenu)
+        }
+        
+    }
+     @Html.Raw("</ul>")
+}
+<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+
+        @foreach (EkartDataModel.ViewModel.MenuInfo m in Model)
+        {
+            if (m._childMenu.Count > 0)
+            {
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        @m._menu.Name
+
+
+
+                        <span class="caret"></span>
+                    </a>
+                    @GetChildMenU(m._childMenu)
+                </li>
+            }
+            else
+            {
+                <li><a href="#">@m._menu.Name</a></li>
+            }
+        }
+
+        <li class="active"><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                Dropdown
+                <span class="caret"></span>
+            </a>
+            <ul role="menu" class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="./">Default</a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <span class="icon-user"></span>Dropdown
+                <span class="caret"></span>
+            </a>
+            <ul role="menu" class="dropdown-menu">
+                <li><a href="#"><span class="icon-user"></span>Profile</a></li>
+                <li><a href="#"><span class="icon-envelope"></span>Inbox</a></li>
+                <li><a href="#"><span class="icon-wrench"></span>Setting</a></li>
+                <li><a href="#"><span class="icon-signout"></span>Setting</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
