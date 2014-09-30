@@ -24,7 +24,7 @@ namespace Eportal.Controllers
             try
             {
                 IEnumerable<MenuInfo> menu = Admin.GetMenu();
-                return PartialView("LeftMenu", menu);
+                return PartialView("_AdminHeaderMenu", menu);
             }
             catch (Exception ex)
             {
